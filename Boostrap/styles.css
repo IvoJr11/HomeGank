@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+
+.top_header {
+    height: 3vh;
+    color: white;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(78, 78, 78);
+    font-size: 0.8rem;
+}
+
+.top_header> div {
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 10vw;
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    background-color: white;
+    height: 5vh;
+    justify-content: center;
+}
+
+li {
+    margin: 0 0.8rem;
+}
+li a {
+    color: black !important;
+    font-size: 0.9rem;
+}
+div a {
+    text-decoration: none;
+    color: white;
+}
+
+#logo {
+    margin-right: 8rem;
+}
+
+.navbar-toggler {
+    margin-right: 1rem;
+}
+
+.nav-item:hover {
+    background-color: rgb(250, 197, 98);
+    border-top: 1px solid rgb(94, 61, 0);
+}
+.nav-item {
+    transition: background-color 400ms 80ms linear;
+}
+.navbar {
+    background-color: white !important;
+}
+
+.dropdown-menu {
+    height: 46vh;
+}
+.dropdown:hover>.dropdown-menu {
+    border-top: 1px solid orange;
+    display: block;
+    transition: height 400ms .1s linear;
+}
+
+.drop_user {
+    height: 7vh;
+}
+
+#buys_menu li p{
+    font-size: 9.5px;
+}
+
+#buys_menu {
+    height: 6vh;
+    width: 17rem;
+    background-color: orange;
+}
+
+#buys {
+    margin: 0;
+    background-color: orange;
+    text-align: center;
+    height: 3vh;
+    width: 100%;
+}
+
+#car {
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    height: 2vh;
+    width: 100%;
+}
+
+@media only screen and (max-width: 766px){.top_header{
+    display: none;
+}
+}
+
+div a:hover {
+    color:white;
+    text-decoration: underline 1px solid white;
+}
+
+.top_header p {
+    margin: 0;
+}

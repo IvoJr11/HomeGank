@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="custom.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Titi Tuerca - Taller mecánico</h1>
+        <img src="./img/logo.png" alt="Logo" id="Logo_head">
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Productos</a>
+        <a href="#" class="link-active">Sobre mí</a>
+        <a href="#">Contacto</a>
+    </nav>
+    <main>
+        <div id="Titi">
+            <img src="./img/titi_tuerca.jpg" alt="Trabajadora" id="img_titi">
+            <div id="text_titi">
+                <h2>¡Hola! Soy <span class="itall" id="subrr">Titi Tuerca</span></h2>
+                <p>Mi nombre real es Agustina Turkisova, pero mi familia siempre me llamó Tini.</p>
+                <p>Dado mi interés por la mecánica, mis amigos y colegas me empezaron a llamar Tuerca.</p>
+                <p>Llevo 8 años al frente de mi propio taller donde junto con  mi equipo damos soluciones mecáncias a cualquiera que lo necesite.</p>
+                <p>Algunas de las marcas que trabajamos:</p>
+                <ul>
+                    <li>Renó</li>
+                    <li>Puyot</li>
+                    <li>Sitrón</li>
+                </ul>
+            </div>
+        </div>
+        <div id="Clients">
+            <h2>Nuestros clientes dicen:</h2>
+            <section>
+                <img src="./img/enrique.jpg" alt="Enrique" class="img_clients">
+                <div id="div_enrique">
+                    <p>El mecánico  anterior dijo que me cambió en gambarulo, pero al poco tiempo se rompió el sototo... para mí que me estaba veseando.</p>
+                    <p class="agrad">¡Genial, Titi! Gracias por ser siempre tan transparente.</p>
+                    <p id="enr_under" class="itall">- Enrique</p>
+                </div>
+            </section>
+            <section>
+                <img src="./img/sabrina.jpg" alt="Sabrina" class="img_clients">
+                <div id="div_sabrina">
+                    <p>No es la primera vez que me paso de la salida de la autopista, y el equipo mecánico de Titi siempre me deja el auto pipí cucú</p>
+                    <p class="agrad">¡Eternamente agradecida!</p>
+                    <p id="sab_under" class="itall">- Sabrina</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>MindHub FullStack Java-Marzo 2022-¡Éxitos a todos!</p>
+        <form action="show_data.html">
+            <fieldset>
+                <legend>Suscribite al newsletter</legend>
+                <label for="emfoot">
+                    Email:
+                    <input type="email" name="email" id="emfoot" placeholder="tuerca@titmail.com">
+                    <input type="submit" value="¡Suscribirme!">
+                </label>
+            </fieldset>
+        </form>
+    </footer>
+</body>
+</html>

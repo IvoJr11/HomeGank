@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: green;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 10vh;
+}
+
+#Logo_head {
+    width: 5rem;
+}
+
+/* NAV-BAR */
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: red;
+    height: 10vh;
+    width: 100%;
+    align-items: center;
+}
+
+nav a {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    padding: 0.4rem 1rem;
+    border: 1px solid blue;
+}
+
+.link-active {
+    background-color: blue;
+    color: white;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 70vh;
+    width: 100%;
+    background-color: orange;
+    justify-content: space-evenly;
+    gap: 3rem;
+}
+
+#Clients {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    gap: 1.5rem;
+}
+
+#Titi {
+    height: 70vh;
+    width: 36vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+ul {
+    padding-left: 1.5rem;
+}
+
+#text_titi {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+#div_enrique {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    background-color: blue;
+    color: white;
+    padding: 1rem;
+}
+
+#div_sabrina {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    background-color: blue;
+    color: white;
+    padding: 1rem;
+}
+
+#sab_under {
+    align-self: flex-end;
+    padding: 3rem 1.5rem 0 0;
+}
+
+#enr_under {
+    align-self: flex-end;
+    padding: 3rem 1.5rem 0 0;
+}
+
+#Titi p {
+    padding: 0.8rem 0;
+}
+
+h2 {
+    padding-top: 1rem;
+}
+
+p {
+    font-size: 10px;
+}
+
+.agrad {
+    padding-top: 1rem;
+}
+
+.itall {
+    font-style: italic;
+}
+
+#subrr {
+    text-decoration: underline;
+}
+
+/* IMAGES */
+
+#img_titi {
+    width: 16rem;
+}
+
+.img_clients {
+    width: 10rem;
+    height: 10rem;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 10vh;
+    margin-top: auto;
+    width: 100%;
+    background-color: yellow;
+}
+legend {
+    text-align: center;
+}
+fieldset {
+    display: flex;
+    justify-content: center;
+    width: 50vw;
+}

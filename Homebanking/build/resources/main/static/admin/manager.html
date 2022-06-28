@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clients</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div id="app">
+        <main class="row p-5">
+            <div class="col-8 main_left">
+                <form>
+                    <div class="mb-3 w-50">
+                      <label for="firstname" class="form-label">Name:</label>
+                      <input type="text" class="form-control" id="firstname" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-3 w-50">
+                      <label for="lastname" class="form-label">Last name:</label>
+                      <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-3 w-50">
+                      <label for="email" class="form-label">Email address: </label>
+                      <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-success" @click="llenandoTabla()">Add client</button>
+                  </form>
+                  
+                  <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Email</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="client in clientes">
+                        <td>{{client.firstName}}</td>
+                        <td>{{client.lastName}}</td>
+                        <td>{{client.email}}</td>
+                        <td><button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#botonEliminar" v-on:click="tomandoUrl(client)">Delete</button></td>                                       
+                        <td>
+                            <button class="btn btn-secondary" type="submit" id="edit" data-bs-toggle="modal" data-bs-target="#botonEditar" v-on:click="tomandoUrl(client)">Edit</button>
+                        </td>
+                        <td><button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#botonCuentas" v-on:click="tomandoUrl(client)">Manage Acc</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            <div class="modal" tabindex="-1" id="botonEditar">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" v-on:click="tomandoUrl(client)"></button>
+                  </div>
+                  <div class="modal-body">
+                    <h6>Edit the Client</h6>
+                    <form>
+                      <div class="mb-3 w-50">
+                        <label for="firstName" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="firstName" v-bind:value="clienteSeleccionado.firstName" required>
+                      </div>
+                      <div class="mb-3 w-50">
+                        <label for="lastName" class="form-label">Last name:</label>
+                        <input type="text" class="form-control" id="lastName" v-bind:value="clienteSeleccionado.lastName" required>
+                      </div>
+                      <div class="mb-3 w-50">
+                        <label for="Email" class="form-label">Email address: </label>
+                        <input type="email" class="form-control" id="Email" v-bind:value="clienteSeleccionado.email" required>
+                      </div>
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="submitModal">Close</button>
+                          <button type="submit" class="btn btn-primary m-lg-2" @click="editarCliente(urlClienteSeleccionado)">Save changes</button>
+                      </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" tabindex="-1" id="botonEliminar">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <h6>Are you sure?</h6>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="submitModal">Close</button>
+                        <button type="button" class="btn btn-danger m-lg-2" @click="deleteClient(urlClienteSeleccionado)">Delete</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" tabindex="-1" id="botonCuentas">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <div v-for="cuenta in clienteSeleccionado.accounts">
+                      <pre>{{cuenta}}</pre>
+                    </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="submitModal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <div class="col-4 clientRequest">
+            <p>Client Rest Response</p>
+            <pre>{{clientes}}</pre>
+        </div>
+        </main>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./sources/manager.js"></script>
+</body>
+</html>

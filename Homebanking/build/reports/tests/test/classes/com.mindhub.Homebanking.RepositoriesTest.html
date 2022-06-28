@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - RepositoriesTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>RepositoriesTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.mindhub.Homebanking.html">com.mindhub.Homebanking</a> &gt; RepositoriesTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">2</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.315s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">existLoans()</td>
+<td class="success">0.026s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">existPersonalLoan()</td>
+<td class="success">0.289s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>10:50:39.389 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+10:50:39.401 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+10:50:39.434 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.mindhub.Homebanking.RepositoriesTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+10:50:39.446 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.mindhub.Homebanking.RepositoriesTest], using SpringBootContextLoader
+10:50:39.449 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.mindhub.Homebanking.RepositoriesTest]: class path resource [com/mindhub/Homebanking/RepositoriesTest-context.xml] does not exist
+10:50:39.450 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.mindhub.Homebanking.RepositoriesTest]: class path resource [com/mindhub/Homebanking/RepositoriesTestContext.groovy] does not exist
+10:50:39.451 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.mindhub.Homebanking.RepositoriesTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:50:39.452 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mindhub.Homebanking.RepositoriesTest]: RepositoriesTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:50:39.501 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.mindhub.Homebanking.RepositoriesTest]
+10:50:39.544 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\MindHub\Homebanking\build\classes\java\main\com\mindhub\Homebanking\HomebankingApplication.class]
+10:50:39.546 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mindhub.Homebanking.HomebankingApplication for test class com.mindhub.Homebanking.RepositoriesTest
+10:50:39.625 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.mindhub.Homebanking.RepositoriesTest]: using defaults.
+10:50:39.626 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+10:50:39.638 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6754ef00, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@619bd14c, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@323e8306, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@a23a01d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@4acf72b6, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7561db12, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3301500b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@24b52d3e, org.springframework.test.context.event.EventPublishingTestExecutionListener@15deb1dc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6e9c413e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@57a4d5ee, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5af5def9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3a45c42a, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@36dce7ed, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@47a64f7d]
+10:50:39.641 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@13c612bd testClass = RepositoriesTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3ef41c66 testClass = RepositoriesTest, locations = '{}', classes = '{class com.mindhub.Homebanking.HomebankingApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@5f031ebd, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@aff911b4, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5974109, [ImportsContextCustomizer@6b739528 key = [org.springframework.boot.test.autoconfigure.jdbc.TestDatabaseAutoConfiguration, org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@3d484181, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@242aa8d9, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@4f2c9ba6, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@7d94beb9], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+10:50:39.672 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.4.10)
+
+2022-06-22 10:50:39.901  INFO 1792 --- [    Test worker] c.mindhub.Homebanking.RepositoriesTest   : Starting RepositoriesTest using Java 11.0.15 on DESKTOP-05VBHOT with PID 1792 (started by ivoja in D:\MindHub\Homebanking)
+2022-06-22 10:50:39.903  INFO 1792 --- [    Test worker] c.mindhub.Homebanking.RepositoriesTest   : No active profile set, falling back to default profiles: default
+2022-06-22 10:50:40.998  INFO 1792 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-06-22 10:50:41.086  INFO 1792 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 6 JPA repository interfaces.
+2022-06-22 10:50:41.755  INFO 1792 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-06-22 10:50:41.934  INFO 1792 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-06-22 10:50:42.012  INFO 1792 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-06-22 10:50:42.064  INFO 1792 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-06-22 10:50:42.224  INFO 1792 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-06-22 10:50:42.348  INFO 1792 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-06-22 10:50:43.061  INFO 1792 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-06-22 10:50:43.067  INFO 1792 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-06-22 10:50:43.723  WARN 1792 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-06-22 10:50:44.106  INFO 1792 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fe37d27, org.springframework.security.web.context.SecurityContextPersistenceFilter@15ca7322, org.springframework.security.web.header.HeaderWriterFilter@29a1dab3, org.springframework.web.filter.CorsFilter@1718de70, org.springframework.security.web.authentication.logout.LogoutFilter@350d9d23, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@42fdf45e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e24a2e2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6e349258, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6bfc5296, org.springframework.security.web.session.SessionManagementFilter@71c1ca1, org.springframework.security.web.access.ExceptionTranslationFilter@c3c63c1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7fa86ddd]
+2022-06-22 10:50:44.577  INFO 1792 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:homebanking'
+2022-06-22 10:50:45.038  INFO 1792 --- [    Test worker] c.mindhub.Homebanking.RepositoriesTest   : Started RepositoriesTest in 5.359 seconds (JVM running for 6.831)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.4.1</a> at Jun 22, 2022, 10:50:46 AM</p>
+</div>
+</div>
+</body>
+</html>

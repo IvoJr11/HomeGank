@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Cards</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Round">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/create-cards.css">
+</head>
+<body>
+    
+    <main id="app">
+        <div id="back" class="shadow-drop-2-center" @click="back">
+            <ion-icon name="arrow-undo-outline"></ion-icon>
+        </div>
+        <div id="contain" class="shadow-drop-2-center">
+            <div>
+                <h2>Put the type and color of your card</h2>
+            </div>
+            <form id="form" @submit.prevent="create">
+                <div id="input_contain">
+                    <div class="input_contain">
+                        <label class="inputs">
+                            <input type="radio" v-model="type" value="CREDIT">
+                            Credit
+                        </label>
+                        <label class="inputs">
+                            <input type="radio" v-model="type" value="DEBIT">
+                            Debit
+                        </label>
+                    </div>
+                    <div class="input_contain">
+                        <label class="inputs">
+                            <input type="radio" v-model="color" value="TITANIUM">
+                            Titanium
+                        </label>
+                        <label class="inputs">
+                            <input type="radio" v-model="color" value="GOLD">
+                            Gold
+                        </label>
+                        <label class="inputs">
+                            <input type="radio" v-model="color" value="SILVER">
+                            Silver
+                        </label>
+                    </div>
+                </div>
+                    <button type="submit" id="create">CREATE</button>
+            </form>
+        </div>
+        <div class="contain_sample shadow-drop-2-center">
+            <h2>Colors of the targets:</h2>
+            <div id="samples">
+                <button type="button" @click="titanium">
+                    <div class="sample_color shadow-drop-2-center titanium"></div>
+                </button>
+                <button type="button" @click="gold">
+                    <div class="sample_color shadow-drop-2-center gold"></div>
+                </button>
+                <button type="button" @click="silver">
+                    <div class="sample_color shadow-drop-2-center silver"></div>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./sources/create-cards.js"></script>
+</body>
+</html>

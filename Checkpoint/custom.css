@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 18vh;
+}
+
+h1 {
+    color: white;
+    font-size: 42px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* NAV BAR */
+
+nav {
+    margin-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: white;
+    color: orange;
+    padding: 1rem 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.link-active {
+    background-color: green;
+    color: white;
+}
+
+/* IMAGES */
+
+.pizza_img {
+    /* width: 10rem; */
+    width: 50%;
+    height: 24vh;
+}
+
+#logo {
+    width: 15vh;
+    margin-left: 1.5rem;
+}
+
+/* MAIN */
+
+main {
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 72vh;
+}
+
+.main_2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    height: 31vh;
+}
+
+.main_3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 31vh;
+}
+
+.pizza_sect {
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    height: 24vh;
+    width: 38vw;
+}
+
+.text_sect {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    padding-left: 5rem;
+    margin-right: 1.4rem;
+}
+
+h2 {
+    color: orange;
+    text-align: center;
+    font-size: 28px;
+    margin: 1.5rem 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-text-stroke: .5px black;
+}
+
+h3 {
+    color: white;
+    font-size: 16px;
+    width: 15rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    -webkit-text-stroke: .5px black;
+}
+
+ul {
+    padding-left: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+}
+
+p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ing {
+    margin: .5rem 0;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+    margin-top: auto;
+    align-items: center;
+    justify-content: space-between;
+    background-color: yellow;
+}
+
+form {
+    display: flex;
+    margin-left: 2rem;
+}
+
+legend, span {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#mailfoot, #Mind {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#Mind {
+    margin-right: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

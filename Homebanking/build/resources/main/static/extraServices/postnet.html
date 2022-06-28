@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postnet</title>
+    <link rel="stylesheet" href="./styles/postnet.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Round">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Round">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+</head>
+<body>
+
+    <main id="app">
+
+        <form @submit.prevent="send">
+            <div class="form">
+                <h3>Card Details</h3>
+                <div id="numbers" @change="limitador">
+                    <input type="number" class="card_num" v-model="number1" id="num1" placeholder="0000" min="1000" max="9999" required>
+                    <input type="number" class="card_num" v-model="number2" id="num2" placeholder="0000" max="9999" required>
+                    <input type="number" class="card_num" v-model="number3" id="num3" placeholder="0000" max="9999" required>
+                    <input type="number" class="card_num" v-model="number4" id="num4" placeholder="0000" max="9999" required>
+                </div>
+    
+                <input type="text" v-model="name" placeholder="Name of Holder" required>
+    
+                <div id="dates">
+    
+                    <input type="number" v-model="cvv" min="100" max="999" id="cvv" placeholder="cvv" required>
+    
+                    <select v-model="month" required>
+                        <option value="" disabled selected>Expiration Month</option>
+                        <option v-for="n in 12" :value="n">{{n}}</option>
+                    </select>
+    
+    
+                    <select v-model="year" required>
+                        <option value="" disabled selected>Expiration Year</option>
+                        <option v-for="n in arrayYears" :value="n">{{n}}</option>
+                    </select>
+    
+                </div>
+            </div>
+
+            <div class="form">
+                <h3>Transaction Details</h3>
+    
+                <div class="money_cont">
+                    <div class="money">$</div><input type="number" v-model="amount" placeholder="Amount" id="amount" required>
+                </div>
+    
+                <input type="text" v-model="description" placeholder="Description" id="description" required>
+
+                <button type="submit" id="apply">
+                  <img src="./assets/coin.png" alt="coin">
+                  Apply
+                </button>
+            </div>
+
+        </form>
+
+        <div id="card">
+            <div class="face" id="card_front">
+                <img src="./assets/mastercard.png" alt="logo">
+                <p >{{number1}} {{number2}} {{number3}} {{number4}}</p>
+                <div id="foot_card">
+                    <p v-show="name == ''">Name & LastName</p>
+                    <p v-show="name != ''">{{name.toUpperCase()}}</p>
+                    <p>
+                        <span v-show="month == 0">MM</span>
+                        <span v-show="month != 0">{{month}}</span>/
+                        <span v-show="year == 0">YY</span>
+                        <span v-show="year !=0">{{String(year).substr(2,2)}}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="face" id="card_back">
+                <span></span>
+                <div id="beam"></div>
+                <p v-show="cvv == 0 || cvv == ''">***</p>
+                <p v-show="cvv != 0 || cvv != ''">{{cvv}}</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./sources/postnet.js"></script>
+
+</body>
+</html>

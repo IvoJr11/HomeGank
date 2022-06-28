@@ -1,0 +1,283 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #2F8B82;
+}
+
+.body_info {
+    align-items: center;
+}
+
+
+/* HEADER */
+
+.Logo {
+    width: 4rem;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #864f3d;
+    height: 10vh;
+    justify-content: space-around;
+    width: 100%;
+    box-shadow: 1px 2px 6px black;
+}
+.leftside {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    /* background-color: aquamarine; */
+    font-size: 0.7em;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    /* background-color: gold; */
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(17, 17, 17);
+    border-radius: 10px;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+}
+nav a:hover {
+    /* box-shadow: 2.5px 3px 3px rgb(3, 197, 107); */
+    background-color: #DED89E;
+    color: rgb(59, 59, 59);
+    box-shadow: 2px 1px 1px black;
+}
+.underfoot {
+    display: flex;
+    align-items: center;
+    background-color: #864f3d;
+    min-height: 10vh;
+    margin-top: auto;
+    width: 100%;
+}
+.underfoot div {
+    padding-left: 0.5rem;
+    width: 100%;
+}
+
+/* TITLE */
+
+.rules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+#maininfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #DEBE9E;
+    height: 90vh;
+    width: 50vw;
+    box-shadow: 6px 7px 4px black;
+    border: 1.2px solid black;
+    border-radius: 3px;
+}
+.main_rules {
+    display: flex;
+    justify-content: center;
+    background-color: #DEBE9E;
+    height: 36rem;
+    box-shadow: 3px 3px 5px black;
+    border: 1.2px solid black;
+    border-radius: 3px;
+    padding-left: 1rem;
+}
+.main_contact {
+    background-color:#DEBE9E;
+    height: 40vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    padding-left: 1.2rem;
+    box-shadow: 3px 3px 5px black;
+    border: 1.2px solid black;
+    border-radius: 3px;
+}
+.main_home {
+    background-color: #DEBE9E;
+    width: 40vw;
+    height: 55vh;
+    padding-left: 2rem;
+    box-shadow: 3px 3px 5px black;
+    border: 1.2px solid black;
+    border-radius: 3px;
+}
+.main_about {
+    background-color: #DEBE9E;
+    height: 67vh;
+    width: 50vw;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    box-shadow: 3px 3px 5px black;
+    border: 1.2px solid black;
+    border-radius: 3px;
+}
+
+/* LISTS */
+
+ol {
+    text-align: left;
+    list-style-position:inside;
+}
+ul {
+    text-align: left;
+    list-style-position: inside;
+    list-style-type: circle;
+}
+ol li {
+    margin-bottom: 1rem;
+}
+#LLFI {
+    list-style: none;
+    padding-left: 2rem;
+}
+#LLSI {
+    padding-left: 5rem;
+}
+.listletter li {
+    margin: 0;
+}
+h3 {
+    margin-top: 1rem;
+}
+dl {
+    margin-bottom: 1rem;
+}
+span {
+    padding-left: 2rem;
+}
+
+/* TABLES */
+
+.divtable {
+    min-height: 1rem;
+    min-width: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.Teams {
+    padding: 0.2rem 2.5rem;
+}
+.h3game {
+    display: flex;
+    justify-content: center;
+    padding-right: 16rem;
+}
+.Time {
+    text-align: center;
+}
+.ubi {
+    padding-right: 1.5rem;
+}
+caption {
+    font-style: italic;
+    text-decoration: underline;
+    text-align: left;
+}
+
+/* FOOTER */
+
+.underinfo {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 34rem;
+    margin-top: 1rem;
+    padding-left: 3rem;
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+.Please {
+    margin-top: 1rem;
+}
+
+/* FORM */
+
+form {
+    background-color: #DEBE9E;
+    box-shadow: 3px 3px 5px black;
+    border: 1.2px solid black;
+    border-radius: 3px;
+    height: 70vh;
+
+}
+.Permissions {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+fieldset {
+    margin: 0.5rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+.fld_widht {
+    width: 40rem;
+}
+.bottom_field {
+    border: none;
+}
+#bottom_input {
+    height: 2rem;
+    width: 3.5rem;
+}
+input {
+    margin-right: 0.5rem;
+}
+#phrp_play {
+    text-indent: 0.7rem;
+}
+
+/* IMAGES */
+
+#contactimg {
+    width: 22rem;
+    border: 0.3rem solid black;
+    border-radius: 0.6rem;
+    margin-top: 0.6rem;
+}
+#aboutimg {
+    width: 22rem;
+    border: 0.3rem solid black;
+    border-radius: 0.6rem;
+    margin-top: 0.5rem;
+}
+#underimg {
+    width: 22rem;
+    border: 0.3rem solid black;
+    border-radius: 0.6rem;
+}
+h6.hide {
+    color: #DEBE9E;   
+}

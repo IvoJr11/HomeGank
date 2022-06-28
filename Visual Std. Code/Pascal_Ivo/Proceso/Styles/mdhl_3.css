@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(179, 116, 0);
+}
+header {
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url(./design1_image1.jpg);
+    background-size: 100%;
+    background-position: center;
+}
+#headimg {
+    width: 10rem;
+    padding-left: 2rem;
+    position: relative;
+    left: 92rem;
+    bottom: 3rem;
+}
+.underbar {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.h1head {
+    width: 100vw;
+    text-shadow: 1px 1px black;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-2rem);
+    background-color: rgb(90, 14, 14);
+    width: 100vw;
+    height: 4.5vh;
+}
+.subtmain {
+    transform: translateY(11.4rem);
+    padding-left: 1rem;
+    padding-top: 1rem;
+    text-decoration: underline black;
+}
+main {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1rem;
+    background-color: rgb(179, 116, 0);
+    border-top: 5px solid rgb(223, 22, 22);
+    width: 100vw;
+}
+.underimg {
+    width: 18rem;
+    border: 0.3rem solid black;
+}
+nav a {
+    color: aliceblue;
+    margin-right: 1rem;
+    padding: 0.3rem;
+    border-color: orange;
+    border-style: inset;
+    border-radius: 3px;
+    border-width: 3.5px;
+    text-decoration: none;
+}
+a:hover {
+    background-color: white;
+    color: black;
+}
+.ttlmain {
+    color: orange;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.sectmain {
+    display: flex;
+    flex-direction: column;
+}
+.main2 {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+div h3 {
+    margin: 0.2rem;
+}
+.images {
+    padding-left: 3rem;
+}
+.sectionss {
+    padding-left: 1rem;
+}
+/* ABOUT MDHL */
+
+#aboutimg {
+    width: 20rem;
+    border: 0.5rem solid black;
+}
+#underimgabt {
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+#contactimg {
+    width: 20rem;
+    border: 0.5rem solid black;
+}
+.underimgct {
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+.sectionct {
+    padding-left: 1rem;
+}

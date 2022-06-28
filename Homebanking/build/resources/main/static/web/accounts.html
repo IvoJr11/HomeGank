@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons+Round">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/newCustom.css">
+</head>
+<body>
+
+  <!-- <img src="./assets/wallpaperbetter.com_1920x1080.jpg"> -->
+  <main id="app">
+    
+    <!-- Navbar -->
+<nav id="navbar" class="d-flex flex-column justify-content-between">
+    <ul class="navbar-items flexbox-col">
+      <li class="navbar-logo flexbox-left">
+        <a class="navbar-item-inner flexbox">
+            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1438.88 1819.54">
+              <polygon points="925.79 318.48 830.56 0 183.51 1384.12 510.41 1178.46 925.79 318.48"/>
+              <polygon points="1438.88 1663.28 1126.35 948.08 111.98 1586.26 0 1819.54 1020.91 1250.57 1123.78 1471.02 783.64 1663.28 1438.88 1663.28"/>
+            </svg>
+          </a>
+          <span class="link-text" style="font-size: 22px;">HomeGank</span>
+      </li>
+      <li class="navbar-item flexbox-left">
+        <a class="navbar-item-inner flexbox-left" href="#">
+          <div class="navbar-item-inner-icon-wrapper flexbox">
+            <ion-icon name="home-outline"></ion-icon>
+          </div>
+          <span class="link-text">Home</span>
+        </a>
+      </li>
+      <li class="navbar-item flexbox-left">
+        <a class="navbar-item-inner flexbox-left" href="./cards.html">
+          <div class="navbar-item-inner-icon-wrapper flexbox">
+            <ion-icon name="card-outline"></ion-icon>
+          </div>
+          <span class="link-text">Cards</span>
+        </a>
+      </li>
+      <li class="navbar-item flexbox-left">
+        <a class="navbar-item-inner flexbox-left" href="./transfers.html">
+          <div class="navbar-item-inner-icon-wrapper flexbox">
+            <ion-icon name="cash-outline"></ion-icon>
+          </div>
+          <span class="link-text">Transfers</span>
+        </a>
+      </li>
+    </ul>
+    <div>
+      <li class="navbar-item flexbox-left mb-1">
+        <a @click="logOut" class="navbar-item-inner flexbox-left">
+          <div class="navbar-item-inner-icon-wrapper flexbox">
+            <ion-icon name="log-out"></ion-icon>
+          </div>
+          <span class="link-text">Log Out</span>
+        </a>
+      </li>
+    </div>
+  </nav>
+
+  <section id="left">
+
+    <div class="top_contain" id="acc_title">
+        <div class="cont_up">
+          <h2>Hi, {{datosCliente.firstName + " " + datosCliente.lastName}}!</h2>
+          <button v-show="datos.length < 3" type="button" class="create" @click="createAccounts">Create</button>
+        </div>
+        <div id="accounts">
+          <article class="tile" v-for="account in datos" id="info_acc">
+            <a v-bind:href="'account.html?id=' + account.id">
+              <h3>{{account.number}}</h3>
+              <h3>Balance: ${{account.balance}}</h3>
+            </a>
+            <ion-icon name="close-outline" id="delete_acc" @click="deleting(account)"></ion-icon>
+          </article>
+        </div>
+    </div>
+
+    <div class="table_contain">
+
+      <h3>Last Transactions</h3>
+      
+      <table id="tableTransactions">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>New Amount</th>
+          </tr>
+        </thead>
+        <tbody v-show="lastTransactions.length != 0" >
+          <tr v-for="transaction in lastTransactions">
+            <td id="firstTD">{{transaction.description}}</td>
+            <td>{{formatDate(transaction.date)}}</td>
+            <td v-if="transaction.type == 'CREDIT'" id="sum">+ &#36;{{(transaction.amount).toLocaleString("en-US")}}</td>
+            <td v-else id="les">- &#36;{{(transaction.amount).toLocaleString("en-US")}}</td>
+            <td>&#36;{{transaction.newAmount}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="right">
+    <div>
+      <h3>Cards</h3>
+      <div class="card_container" v-for="card in cards">
+        <div class="card" :class="{'gold': card.color == 'GOLD', 'sil': card.color == 'SILVER', 'tit': card.color == 'TITANIUM'}">
+          <p>{{card.cvv}}</p>
+        </div>
+        <div class="data_card">
+          <p>* {{card.number.substr(15,4)}}</p>
+          <p>{{card.type}}</p>
+        </div>
+      </div>
+    </div>
+
+      <div class="loan_container">
+
+        <h3>Current Loans</h3>
+
+        <div class="loan" v-for="loan in loans">
+          <img src="./assets/car.png" alt="car_icon" class="icon car" v-show="loan.name == 'Car Loan'">
+          <img src="./assets/house.png" alt="house_icon" class="icon house" v-show="loan.name == 'Mortgage Loan'">
+          <img src="./assets/user.png" alt="user_icon" class="icon user" v-show="loan.name == 'Personal Loan'">
+          <p>{{loan.name}}</p>
+          <div class="loan_info">
+          <p>&#36;{{(loan.amount).toLocaleString("en-US")}}</p>
+          <p>{{loan.payment}}</p>
+        </div>
+        </div>
+        <div class="create_loan" v-show="loans.length == 0">
+          <a href="./loan-application.html">
+            <img src="./assets/plus.png" alt="plus_icon">
+            <p>Request a loan</p>
+          </a>
+        </div>
+        </div>
+      </div>
+  </section>
+
+
+  </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="./sources/newAccounts.js"></script>
+</body>
+</html>
